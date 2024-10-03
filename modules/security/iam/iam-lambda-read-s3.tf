@@ -1,5 +1,5 @@
 resource "aws_iam_role_policy" "lambda_s3_access" {
-  name = "lambda_s3_access"
+  name = var.lambda_read_s3
   role = aws_iam_role.lambda_exec_role.id
 
   policy = jsonencode({
